@@ -13,6 +13,7 @@
     "build": "echo Nothing to do"
   },
   "dependencies": {
+    "@typescript-eslint/eslint-plugin": "5.11.0",
     "@typescript-eslint/parser": "5.11.0",
     "eslint-plugin-rxjs": "4.0.1",
     "eslint-plugin-simple-import-sort": "7.0.0",
