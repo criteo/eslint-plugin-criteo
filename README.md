@@ -77,7 +77,7 @@ You can also declare `"*.{ts,component.html,json,scss}": "prettier --write"` if 
 
 🙌
 
-## Recommended rules
+## Criteo rules
 
 ### ngx-component-display
 
@@ -101,28 +101,8 @@ Why?
 
 It can be tricky to pin down the source of an error when using the @Selector() decorator. While this rule can't make sure you put all the parameters in the right order, it does avoid the most obvious mistakes.
 
-### rxjs/no-unsafe-takeuntil
+## External rules
 
-_Ensure untilDestroyed is the last operator._
-
-Config: cf https://github.com/cartant/eslint-plugin-rxjs/blob/main/docs/rules/no-unsafe-takeuntil.md#options
-
-Why?
-
-This rule effects failures whenever `untilDestroyed` is used in observable compositions that can leak subscriptions.
-Read more: https://github.com/cartant/eslint-plugin-rxjs/blob/main/docs/rules/no-unsafe-takeuntil.md and https://ncjamieson.com/avoiding-takeuntil-leaks/
-
-### simple-import-sort/exports and simple-import-sort/imports
-
-_Ensure exports/imports are sorted._
-
-Config: cf https://github.com/lydell/eslint-plugin-simple-import-sort
-
-Why?
-
-Some IDE sort exports/imports automatically when formatting code using their own sorting algorithm. Others do not.
-
-- Avoid polluting the changes depending on the IDE.
-- Ease the code reviews.
-- Avoid merge conflicts when several people work on the same file with different IDE.
-- Has an auto-fix!
+- All recommended from `eslint`: https://eslint.org/docs/rules/
+- All recommended from `typescript`: https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin#supported-rules
+- `no-only-tests/no-only-tests`: https://github.com/levibuzolic/eslint-plugin-no-only-tests#usage
