@@ -13,6 +13,8 @@
     "build": "echo Nothing to do"
   },
   "dependencies": {
+    "@angular-eslint/eslint-plugin-template": "4.3.0",
+    "@angular-eslint/template-parser": "4.3.0",
     "@typescript-eslint/eslint-plugin": "5.11.0",
     "@typescript-eslint/parser": "5.11.0",
     "eslint-plugin-no-only-tests": "2.6.0",

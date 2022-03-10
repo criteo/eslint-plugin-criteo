@@ -21,7 +21,12 @@ Add `criteo` to the plugins section of your `.eslintrc` configuration file and a
   "overrides": [
     {
       "files": ["*.ts"],
-      "extends": ["plugin:criteo/recommended-lib"],
+      "extends": ["plugin:criteo/recommended-app"], // or recommended-lib
+      [...]
+    },
+    {
+      "files": ["*.html"],
+      "extends": ["plugin:criteo/recommended-template"],
       [...]
     }
   ]
@@ -103,6 +108,9 @@ It can be tricky to pin down the source of an error when using the @Selector() d
 
 ## External rules
 
-- All recommended from `eslint`: https://eslint.org/docs/rules/
-- All recommended from `typescript`: https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin#supported-rules
+- All recommended rules from:
+  - `@angular-eslint/template`: https://github.com/angular-eslint/angular-eslint/tree/master/packages/eslint-plugin-template/docs/rules
+  - `@typescript-eslint`: https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin#supported-rules
+  - `eslint`: https://eslint.org/docs/rules/
+- `@angular-eslint/template/use-track-by-function`: https://github.com/angular-eslint/angular-eslint/blob/master/packages/eslint-plugin-template/docs/rules/use-track-by-function.md
 - `no-only-tests/no-only-tests`: https://github.com/levibuzolic/eslint-plugin-no-only-tests#usage
