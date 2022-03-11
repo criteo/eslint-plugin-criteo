@@ -109,7 +109,6 @@ It can be tricky to pin down the source of an error when using the @Selector() d
 ## External rules
 
 - All recommended rules from:
-  - `cypress`: https://github.com/cypress-io/eslint-plugin-cypress/tree/master/docs/rules
   - `@angular-eslint`: https://github.com/angular-eslint/angular-eslint/tree/master/packages/eslint-plugin/docs/rules
   - `@angular-eslint/template`: https://github.com/angular-eslint/angular-eslint/tree/master/packages/eslint-plugin-template/docs/rules
   - `@typescript-eslint`: https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin#supported-rules
@@ -123,9 +122,14 @@ It can be tricky to pin down the source of an error when using the @Selector() d
 - `@angular-eslint/template/no-duplicate-attributes`: https://github.com/angular-eslint/angular-eslint/blob/master/packages/eslint-plugin-template/docs/rules/no-duplicate-attributes.md
 - `@angular-eslint/template/no-positive-tabindex`: https://github.com/angular-eslint/angular-eslint/blob/master/packages/eslint-plugin-template/docs/rules/no-positive-tabindex.md
 - `@angular-eslint/template/use-track-by-function`: https://github.com/angular-eslint/angular-eslint/blob/master/packages/eslint-plugin-template/docs/rules/use-track-by-function.md
-- `cypress/no-force`: https://github.com/cypress-io/eslint-plugin-cypress/blob/master/docs/rules/no-force.md
 - `no-only-tests/no-only-tests`: https://github.com/levibuzolic/eslint-plugin-no-only-tests#usage
 - `rxjs-angular/prefer-takeuntil` (with custom config): https://github.com/cartant/eslint-plugin-rxjs-angular/blob/main/docs/rules/prefer-takeuntil.md
 - `rxjs/finnish`: https://github.com/cartant/eslint-plugin-rxjs/blob/main/docs/rules/finnish.md
 - `rxjs/no-unsafe-takeuntil` (with custom config): https://github.com/cartant/eslint-plugin-rxjs/blob/main/docs/rules/no-unsafe-takeuntil.md
 - `simple-import-sort/exports` and `simple-import-sort/imports` (with custom config): https://github.com/lydell/eslint-plugin-simple-import-sort
+
+### Specifically for applications (not relevant for libraries)
+
+- All recommended rules from:
+  - `cypress`: https://github.com/cypress-io/eslint-plugin-cypress/tree/master/docs/rules
+- `cypress/no-force`: https://github.com/cypress-io/eslint-plugin-cypress/blob/master/docs/rules/no-force.md
