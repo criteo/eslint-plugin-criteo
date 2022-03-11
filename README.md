@@ -109,6 +109,7 @@ It can be tricky to pin down the source of an error when using the @Selector() d
 ## External rules
 
 - All recommended rules from:
+  - `@angular-eslint`: https://github.com/angular-eslint/angular-eslint/tree/master/packages/eslint-plugin/docs/rules
   - `@angular-eslint/template`: https://github.com/angular-eslint/angular-eslint/tree/master/packages/eslint-plugin-template/docs/rules
   - `@typescript-eslint`: https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin#supported-rules
   - `eslint`: https://eslint.org/docs/rules/
