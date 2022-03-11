@@ -118,6 +118,11 @@ It can be tricky to pin down the source of an error when using the @Selector() d
 - `@angular-eslint/template/accessibility-elements-content`: https://github.com/angular-eslint/angular-eslint/blob/master/packages/eslint-plugin-template/docs/rules/accessibility-elements-content.md
 - `@angular-eslint/template/accessibility-label-has-associated-control`: https://github.com/angular-eslint/angular-eslint/blob/master/packages/eslint-plugin-template/docs/rules/accessibility-label-has-associated-control.md
 - `@angular-eslint/template/accessibility-valid-aria`: https://github.com/angular-eslint/angular-eslint/blob/master/packages/eslint-plugin-template/docs/rules/accessibility-valid-aria.md
+- `@angular-eslint/no-lifecycle-call`: https://github.com/angular-eslint/angular-eslint/blob/master/packages/eslint-plugin/docs/rules/no-lifecycle-call.md
+- `@angular-eslint/no-pipe-impure`: https://github.com/angular-eslint/angular-eslint/blob/master/packages/eslint-plugin/docs/rules/no-pipe-impure.md 
+- `@angular-eslint/prefer-on-push-component-change-detection`: https://github.com/angular-eslint/angular-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-on-push-component-change-detection.md
+- `@angular-eslint/relative-url-prefix`: https://github.com/angular-eslint/angular-eslint/blob/master/packages/eslint-plugin/docs/rules/relative-url-prefix.md 
+- `@angular-eslint/use-component-view-encapsulation`: https://github.com/angular-eslint/angular-eslint/blob/master/packages/eslint-plugin/docs/rules/use-component-view-encapsulation.md 
 - `@angular-eslint/template/no-call-expression`: https://github.com/angular-eslint/angular-eslint/blob/master/packages/eslint-plugin-template/docs/rules/no-call-expression.md
 - `@angular-eslint/template/no-duplicate-attributes`: https://github.com/angular-eslint/angular-eslint/blob/master/packages/eslint-plugin-template/docs/rules/no-duplicate-attributes.md
 - `@angular-eslint/template/no-positive-tabindex`: https://github.com/angular-eslint/angular-eslint/blob/master/packages/eslint-plugin-template/docs/rules/no-positive-tabindex.md
