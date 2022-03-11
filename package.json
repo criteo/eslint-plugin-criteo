@@ -19,7 +19,7 @@
     "@typescript-eslint/parser": "5.11.0",
     "eslint-plugin-no-only-tests": "2.6.0",
     "eslint-plugin-rxjs": "4.0.1",
-    "eslint-plugin-rxjs-angular": "^2.0.0",
+    "eslint-plugin-rxjs-angular": "2.0.0",
     "eslint-plugin-simple-import-sort": "7.0.0",
     "requireindex": "1.2.0"
   },
