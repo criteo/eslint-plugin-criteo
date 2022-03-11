@@ -113,6 +113,7 @@ It can be tricky to pin down the source of an error when using the @Selector() d
   - `@typescript-eslint`: https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin#supported-rules
   - `eslint`: https://eslint.org/docs/rules/
   - `rxjs`: https://github.com/cartant/eslint-plugin-rxjs#rules
+- `@angular-eslint/template/no-call-expression`: https://github.com/angular-eslint/angular-eslint/blob/master/packages/eslint-plugin-template/docs/rules/no-call-expression.md
 - `@angular-eslint/template/use-track-by-function`: https://github.com/angular-eslint/angular-eslint/blob/master/packages/eslint-plugin-template/docs/rules/use-track-by-function.md
 - `no-only-tests/no-only-tests`: https://github.com/levibuzolic/eslint-plugin-no-only-tests#usage
 - `rxjs-angular/prefer-takeuntil` (with custom config): https://github.com/cartant/eslint-plugin-rxjs-angular/blob/main/docs/rules/prefer-takeuntil.md
