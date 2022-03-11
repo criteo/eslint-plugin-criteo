@@ -132,3 +132,9 @@ It can be tricky to pin down the source of an error when using the @Selector() d
 - `rxjs/finnish`: https://github.com/cartant/eslint-plugin-rxjs/blob/main/docs/rules/finnish.md
 - `rxjs/no-unsafe-takeuntil` (with custom config): https://github.com/cartant/eslint-plugin-rxjs/blob/main/docs/rules/no-unsafe-takeuntil.md
 - `simple-import-sort/exports` and `simple-import-sort/imports` (with custom config): https://github.com/lydell/eslint-plugin-simple-import-sort
+
+### Specifically for applications (not relevant for libraries)
+
+- All recommended rules from:
+  - `cypress`: https://github.com/cypress-io/eslint-plugin-cypress/tree/master/docs/rules
+- `cypress/no-force`: https://github.com/cypress-io/eslint-plugin-cypress/blob/master/docs/rules/no-force.md
