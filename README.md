@@ -8,6 +8,8 @@ This ES lint plugin defines custom rules we use at Criteo and exposes a recommen
 npm install eslint eslint-plugin-criteo --save-dev
 ```
 
+Like any library, keep it updated to make sure your project follows the latest coding recommendations.
+
 ## Usage
 
 Add `criteo` to the plugins section of your `.eslintrc` configuration file and apply:
@@ -33,7 +35,7 @@ Add `criteo` to the plugins section of your `.eslintrc` configuration file and a
 }
 ```
 
-Then configure/disable the rules under the rules section.
+Then configure/disable the rules under the rules section, following your project's context and constraints.
 
 ```json
 {
@@ -108,33 +110,34 @@ It can be tricky to pin down the source of an error when using the @Selector() d
 
 ## External rules
 
-- All recommended rules from:
-  - `@angular-eslint`: https://github.com/angular-eslint/angular-eslint/tree/master/packages/eslint-plugin/docs/rules
-  - `@angular-eslint/template`: https://github.com/angular-eslint/angular-eslint/tree/master/packages/eslint-plugin-template/docs/rules
-  - `@typescript-eslint`: https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin#supported-rules
-  - `eslint`: https://eslint.org/docs/rules/
-  - `rxjs`: https://github.com/cartant/eslint-plugin-rxjs#rules
-- `@angular-eslint/template/accessibility-alt-text`: https://github.com/angular-eslint/angular-eslint/blob/master/packages/eslint-plugin-template/docs/rules/accessibility-alt-text.md
-- `@angular-eslint/template/accessibility-elements-content`: https://github.com/angular-eslint/angular-eslint/blob/master/packages/eslint-plugin-template/docs/rules/accessibility-elements-content.md
-- `@angular-eslint/template/accessibility-label-has-associated-control`: https://github.com/angular-eslint/angular-eslint/blob/master/packages/eslint-plugin-template/docs/rules/accessibility-label-has-associated-control.md
-- `@angular-eslint/template/accessibility-valid-aria`: https://github.com/angular-eslint/angular-eslint/blob/master/packages/eslint-plugin-template/docs/rules/accessibility-valid-aria.md
-- `@angular-eslint/no-lifecycle-call`: https://github.com/angular-eslint/angular-eslint/blob/master/packages/eslint-plugin/docs/rules/no-lifecycle-call.md
-- `@angular-eslint/no-pipe-impure`: https://github.com/angular-eslint/angular-eslint/blob/master/packages/eslint-plugin/docs/rules/no-pipe-impure.md
-- `@angular-eslint/prefer-on-push-component-change-detection`: https://github.com/angular-eslint/angular-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-on-push-component-change-detection.md
-- `@angular-eslint/relative-url-prefix`: https://github.com/angular-eslint/angular-eslint/blob/master/packages/eslint-plugin/docs/rules/relative-url-prefix.md
-- `@angular-eslint/use-component-view-encapsulation`: https://github.com/angular-eslint/angular-eslint/blob/master/packages/eslint-plugin/docs/rules/use-component-view-encapsulation.md
-- `@angular-eslint/template/no-call-expression`: https://github.com/angular-eslint/angular-eslint/blob/master/packages/eslint-plugin-template/docs/rules/no-call-expression.md
-- `@angular-eslint/template/no-duplicate-attributes`: https://github.com/angular-eslint/angular-eslint/blob/master/packages/eslint-plugin-template/docs/rules/no-duplicate-attributes.md
-- `@angular-eslint/template/no-positive-tabindex`: https://github.com/angular-eslint/angular-eslint/blob/master/packages/eslint-plugin-template/docs/rules/no-positive-tabindex.md
-- `@angular-eslint/template/use-track-by-function`: https://github.com/angular-eslint/angular-eslint/blob/master/packages/eslint-plugin-template/docs/rules/use-track-by-function.md
-- `no-only-tests/no-only-tests`: https://github.com/levibuzolic/eslint-plugin-no-only-tests#usage
-- `rxjs-angular/prefer-takeuntil` (with custom config): https://github.com/cartant/eslint-plugin-rxjs-angular/blob/main/docs/rules/prefer-takeuntil.md
-- `rxjs/finnish` (with custom config): https://github.com/cartant/eslint-plugin-rxjs/blob/main/docs/rules/finnish.md
-- `rxjs/no-unsafe-takeuntil` (with custom config): https://github.com/cartant/eslint-plugin-rxjs/blob/main/docs/rules/no-unsafe-takeuntil.md
-- `simple-import-sort/exports` and `simple-import-sort/imports` (with custom config): https://github.com/lydell/eslint-plugin-simple-import-sort
+In addition to the rules defined above, we have chosen some rules from external libraries which we activate by default.
+Some of these have custom config to better address our specific use cases.
 
-### Specifically for applications (not relevant for libraries)
-
-- All recommended rules from:
-  - `cypress`: https://github.com/cypress-io/eslint-plugin-cypress/tree/master/docs/rules
-- `cypress/no-force`: https://github.com/cypress-io/eslint-plugin-cypress/blob/master/docs/rules/no-force.md
+| Library            | Rule name                                                             | Documentation                                                                                                                                         | Applies to applications | Applies to libraries |
+| ------------------ | --------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------- | -------------------- |
+| ESLint             | All recommended ESLint rules                                          | https://eslint.org/docs/rules/                                                                                                                        | ✅                      | ✅                   |
+| TypeScript         | All recommended rules from `@typescript-eslint`                       | https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin#supported-rules                                               | ✅                      | ✅                   |
+| Angular            | All recommended rules from `@angular-eslint`                          | https://github.com/angular-eslint/angular-eslint/tree/master/packages/eslint-plugin/docs/rules                                                        | ✅                      | ✅                   |
+| Angular            | `@angular-eslint/no-lifecycle-call`                                   | https://github.com/angular-eslint/angular-eslint/blob/master/packages/eslint-plugin/docs/rules/no-lifecycle-call.md                                   | ✅                      | ✅                   |
+| Angular            | `@angular-eslint/no-pipe-impure`                                      | https://github.com/angular-eslint/angular-eslint/blob/master/packages/eslint-plugin/docs/rules/no-pipe-impure.md                                      | ✅                      | ✅                   |
+| Angular            | `@angular-eslint/prefer-on-push-component-change-detection`           | https://github.com/angular-eslint/angular-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-on-push-component-change-detection.md           | ✅                      | ✅                   |
+| Angular            | `@angular-eslint/relative-url-prefix`                                 | https://github.com/angular-eslint/angular-eslint/blob/master/packages/eslint-plugin/docs/rules/relative-url-prefix.md                                 | ✅                      | ✅                   |
+| Angular            | `@angular-eslint/use-component-view-encapsulation`                    | https://github.com/angular-eslint/angular-eslint/blob/master/packages/eslint-plugin/docs/rules/use-component-view-encapsulation.md                    | ✅                      | ✅                   |
+| Angular            | All recommended rules from `@angular-eslint/template`                 | https://github.com/angular-eslint/angular-eslint/tree/master/packages/eslint-plugin-template/docs/rules                                               | ✅                      | ✅                   |
+| Angular            | `@angular-eslint/template/accessibility-alt-text`                     | https://github.com/angular-eslint/angular-eslint/blob/master/packages/eslint-plugin-template/docs/rules/accessibility-alt-text.md                     | ✅                      | ✅                   |
+| Angular            | `@angular-eslint/template/accessibility-elements-content`             | https://github.com/angular-eslint/angular-eslint/blob/master/packages/eslint-plugin-template/docs/rules/accessibility-elements-content.md             | ✅                      | ✅                   |
+| Angular            | `@angular-eslint/template/accessibility-label-has-associated-control` | https://github.com/angular-eslint/angular-eslint/blob/master/packages/eslint-plugin-template/docs/rules/accessibility-label-has-associated-control.md | ✅                      | ✅                   |
+| Angular            | `@angular-eslint/template/accessibility-valid-aria`                   | https://github.com/angular-eslint/angular-eslint/blob/master/packages/eslint-plugin-template/docs/rules/accessibility-valid-aria.md                   | ✅                      | ✅                   |
+| Angular            | `@angular-eslint/template/no-call-expression`                         | https://github.com/angular-eslint/angular-eslint/blob/master/packages/eslint-plugin-template/docs/rules/no-call-expression.md                         | ✅                      | ✅                   |
+| Angular            | `@angular-eslint/template/no-duplicate-attributes`                    | https://github.com/angular-eslint/angular-eslint/blob/master/packages/eslint-plugin-template/docs/rules/no-duplicate-attributes.md                    | ✅                      | ✅                   |
+| Angular            | `@angular-eslint/template/no-positive-tabindex`                       | https://github.com/angular-eslint/angular-eslint/blob/master/packages/eslint-plugin-template/docs/rules/no-positive-tabindex.md                       | ✅                      | ✅                   |
+| Angular            | `@angular-eslint/template/use-track-by-function`                      | https://github.com/angular-eslint/angular-eslint/blob/master/packages/eslint-plugin-template/docs/rules/use-track-by-function.md                      | ✅                      | ✅                   |
+| Cypress            | All recommended rules from `cypress`                                  | https://github.com/cypress-io/eslint-plugin-cypress/tree/master/docs/rules                                                                            | ✅                      |                      |
+| Cypress            | `cypress/no-force`                                                    | https://github.com/cypress-io/eslint-plugin-cypress/blob/master/docs/rules/no-force.md                                                                | ✅                      |                      |
+| RxJS               | All recommended rules from `rxjs`                                     | https://github.com/cartant/eslint-plugin-rxjs#rules                                                                                                   | ✅                      | ✅                   |
+| RxJS               | `rxjs-angular/prefer-takeuntil` (with custom config)                  | https://github.com/cartant/eslint-plugin-rxjs-angular/blob/main/docs/rules/prefer-takeuntil.md                                                        | ✅                      | ✅                   |
+| RxJS               | `rxjs/finnish` (with custom config)                                   | https://github.com/cartant/eslint-plugin-rxjs/blob/main/docs/rules/finnish.md                                                                         | ✅                      | ✅                   |
+| RxJS               | `rxjs/no-unsafe-takeuntil` (with custom config)                       | https://github.com/cartant/eslint-plugin-rxjs/blob/main/docs/rules/no-unsafe-takeuntil.md                                                             | ✅                      | ✅                   |
+| no-only-tests      | `no-only-tests/no-only-tests`                                         | https://github.com/levibuzolic/eslint-plugin-no-only-tests#usage                                                                                      | ✅                      | ✅                   |
+| simple-import-sort | `simple-import-sort/exports`                                          | https://github.com/lydell/eslint-plugin-simple-import-sort                                                                                            | ✅                      | ✅                   |
+| simple-import-sort | `simple-import-sort/imports` (with custom config)                     | https://github.com/lydell/eslint-plugin-simple-import-sort                                                                                            | ✅                      | ✅                   |
