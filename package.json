@@ -40,5 +40,6 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/criteo/eslint-plugin-criteo.git"
-  }
+  },
+  "bugs": "https://github.com/criteo/eslint-plugin-criteo/issues"
 }
