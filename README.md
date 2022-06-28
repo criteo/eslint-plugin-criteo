@@ -108,6 +108,14 @@ Why?
 
 It can be tricky to pin down the source of an error when using the @Selector() decorator. While this rule can't make sure you put all the parameters in the right order, it does avoid the most obvious mistakes.
 
+### no-todo-without-ticket
+
+_Ensure that comments with TODO specify a JIRA ticket in which the work will be completed._
+
+Why?
+
+Commits with TODO comments indicating that a portion of functionality has yet to be implemented are easy to overlook later on. This rule encourages all outstanding work to be tracked by an external ticket as well as in code comments.
+
 ## External rules
 
 In addition to the rules defined above, we have chosen some rules from external libraries which we activate by default.
