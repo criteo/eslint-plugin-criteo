@@ -8,6 +8,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 Please see [the README](./README.md) for details of added rules.
 
 ## [Unreleased]
+### Added
+- `cypress-no-force`
+
 ### Changed
 - Add FIXMEs to `no-todo-without-jira-ticket`
 
