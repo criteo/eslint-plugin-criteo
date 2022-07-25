@@ -110,11 +110,26 @@ It can be tricky to pin down the source of an error when using the @Selector() d
 
 ### no-todo-without-ticket
 
-_Ensure that comments with TODO specify a JIRA ticket in which the work will be completed._
+_Ensure that comments with TODO or FIXME specify a JIRA ticket in which the work will be completed._
 
 Why?
 
 Commits with TODO comments indicating that a portion of functionality has yet to be implemented are easy to overlook later on. This rule encourages all outstanding work to be tracked by an external ticket as well as in code comments.
+
+### cypress-no-force
+
+_Cypress: disallow using of 'force: true' option._
+
+Why?
+
+The Cypress ESLint plugin provides this rule, with the following explanation:
+> Using `force: true` on inputs appears to be confusing rather than helpful.
+> It usually silences the actual problem instead of providing a way to overcome it.
+> See [Cypress Core Concepts](https://docs.cypress.io/guides/core-concepts/interacting-with-elements.html#Forcing).
+
+Unfortunately, the Cypress plugin's version only works when calling the function like `cy.get(...).click({ force: true })`,
+i.e. with `cy` in the same line. But in our code we often use helper functions, so the rule does not detect our usages.
+This new version of the rule leverages TypeScript to work out if the method is called on a `Cypress.Chainable` object.
 
 ## External rules
 
@@ -141,7 +156,6 @@ Some of these have custom config to better address our specific use cases.
 | Angular            | `@angular-eslint/template/no-positive-tabindex`                       | https://github.com/angular-eslint/angular-eslint/blob/master/packages/eslint-plugin-template/docs/rules/no-positive-tabindex.md                       | ✅                      | ✅                   |
 | Angular            | `@angular-eslint/template/use-track-by-function`                      | https://github.com/angular-eslint/angular-eslint/blob/master/packages/eslint-plugin-template/docs/rules/use-track-by-function.md                      | ✅                      | ✅                   |
 | Cypress            | All recommended rules from `cypress`                                  | https://github.com/cypress-io/eslint-plugin-cypress#rules                                                                                             | ✅                      |                      |
-| Cypress            | `cypress/no-force`                                                    | https://github.com/cypress-io/eslint-plugin-cypress/blob/master/docs/rules/no-force.md                                                                | ✅                      |                      |
 | RxJS               | All recommended rules from `rxjs`                                     | https://github.com/cartant/eslint-plugin-rxjs#rules                                                                                                   | ✅                      | ✅                   |
 | RxJS               | `rxjs-angular/prefer-takeuntil` (with custom config)                  | https://github.com/cartant/eslint-plugin-rxjs-angular/blob/main/docs/rules/prefer-takeuntil.md                                                        | ✅                      | ✅                   |
 | RxJS               | `rxjs/finnish` (with custom config)                                   | https://github.com/cartant/eslint-plugin-rxjs/blob/main/docs/rules/finnish.md                                                                         | ✅                      | ✅                   |
