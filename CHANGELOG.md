@@ -9,6 +9,10 @@ Please see [the README](./README.md) for details of added rules.
 
 ## [Unreleased]
 
+## [3.2.1]
+### Changed
+- Update `engines` field in package.json to allow node versions > 10 
+
 ## [3.2.0]
 ### Added
 - `cypress-no-force`
