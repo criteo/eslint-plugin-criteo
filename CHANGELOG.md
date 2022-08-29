@@ -8,6 +8,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 Please see [the README](./README.md) for details of added rules.
 
 ## [Unreleased]
+
+## [4.0.0]
 ### Changed
 - [BREAKING] Upgrade Angular plugins to version 13 for compatibility with Angular 13
 - [BREAKING] Move dependent plugins to peerDependencies so that they appear in the root node_modules (https://github.com/criteo/eslint-plugin-criteo/issues/15)
