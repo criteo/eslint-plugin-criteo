@@ -14,8 +14,9 @@ Like any library, keep it updated to make sure your project follows the latest c
 
 Add `criteo` to the plugins section of your `.eslintrc` configuration file and apply:
 
-- `plugin:criteo/recommended-app` if the project is an application
-- `plugin:criteo/recommended-lib` if the project is a library
+- `plugin:criteo/recommended-app` if the project is an Angular application
+- `plugin:criteo/recommended-lib` if the project is an Angular library
+- `plugin:criteo/recommended-react-app` if the project is a React application or library
 
 ```json
 {
@@ -123,6 +124,7 @@ _Cypress: disallow using of 'force: true' option._
 Why?
 
 The Cypress ESLint plugin provides this rule, with the following explanation:
+
 > Using `force: true` on inputs appears to be confusing rather than helpful.
 > It usually silences the actual problem instead of providing a way to overcome it.
 > See [Cypress Core Concepts](https://docs.cypress.io/guides/core-concepts/interacting-with-elements.html#Forcing).
