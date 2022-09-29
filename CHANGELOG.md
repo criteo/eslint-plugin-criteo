@@ -9,6 +9,10 @@ Please see [the README](./README.md) for details of added rules.
 
 ## [Unreleased]
 
+## [4.1.0]
+### Added
+- Provide React rules
+
 ## [4.0.0]
 ### Changed
 - [BREAKING] Upgrade Angular plugins to version 13 for compatibility with Angular 13
