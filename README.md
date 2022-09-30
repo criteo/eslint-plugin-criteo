@@ -133,6 +133,15 @@ Unfortunately, the Cypress plugin's version only works when calling the function
 i.e. with `cy` in the same line. But in our code we often use helper functions, so the rule does not detect our usages.
 This new version of the rule leverages TypeScript to work out if the method is called on a `Cypress.Chainable` object.
 
+### until-destroy
+
+_Ensure @UntilDestroy() decorator is not forgotten, nor applied when it is not necessary._
+
+Why?
+
+`@UntilDestroy()` defines mandatory properties in decorated class to make the `untilDestroyed` operator work.
+Nevertheless, the decorator should not be applied when it is not necessary because it would inject useless code.
+
 ## External rules
 
 In addition to the rules defined above, we have chosen some rules from external libraries which we activate by default.
