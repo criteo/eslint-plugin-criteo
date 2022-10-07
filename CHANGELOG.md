@@ -9,6 +9,14 @@ Please see [the README](./README.md) for details of added rules.
 
 ## [Unreleased]
 
+## [4.2.0]
+### Added
+- `criteo/until-destroy`
+- React Lib rules
+
+### Changed
+- Fix typo in `react-hooks` plugin
+
 ## [4.1.0]
 ### Added
 - Provide React rules
