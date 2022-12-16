@@ -9,6 +9,8 @@ Please see [the README](./README.md) for details of added rules.
 
 ## [Unreleased]
 
+## [4.3.0]
+
 ### Added
 
 - `criteo/filename`
