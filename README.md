@@ -141,6 +141,14 @@ Why?
 - By default, custom components are displayed as `inline` by the browser which is rarely what we expect. For example, it makes impossible to define a width or margins on them. E.g. `<my-component class="w-100 cds-mb-3"></my-component>` would have no effect.
 - The workaround of wrapping them in `<div></div>` should be avoided to not make the DOM and the bundle file heavier.
 
+### no-ngxs-select-decorator
+
+_Forbid using the NGXS `@Select()` decorator: `@ViewSelectSnapshot()` should be preferred._
+
+Why?
+
+`@Select()` exposes an `Observable` that must be subscribed using the `async` pipe in the template. It makes it verbose and creates one subscription per usage. However, the `@ViewSelectSnapshot()` exposes the raw value directly and refreshes the view on every change ; making it more concise and easier to use.
+
 ### ngxs-selector-array-length
 
 _Ensure that when using the @Selector() decorator, the number of selectors passed in matches the number of arguments passed to the selector function._
@@ -156,6 +164,18 @@ _Ensure that comments with TODO or FIXME specify a JIRA ticket in which the work
 Why?
 
 Commits with TODO comments indicating that a portion of functionality has yet to be implemented are easy to overlook later on. This rule encourages all outstanding work to be tracked by an external ticket as well as in code comments.
+
+### prefer-readonly-decorators
+
+_Ensure that appropriate decorated properties are `readonly`._
+
+Config:
+
+- `decorators`: array of decorator names that should always be `readonly` (default: `['Output', 'ViewSelectSnapshot']`)
+
+Why?
+
+Some decorated properties should be `readonly` because their decorator handles the value assignment and should never be assigned by hand (ex: `@ViewSelectSnapshot()`), or their value should never change (ex: `@Output()`) to prevent errors.
 
 ### until-destroy
 

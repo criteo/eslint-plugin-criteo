@@ -9,6 +9,11 @@ Please see [the README](./README.md) for details of added rules.
 
 ## [Unreleased]
 
+### Added
+
+- `criteo/no-ngxs-select-decorator`
+- `criteo/prefer-readonly-decorators`
+
 ## [4.3.0]
 
 ### Added
