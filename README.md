@@ -113,7 +113,7 @@ Config:
 
 Why?
 
-Improve the file tree readability.
+Improve the file tree readability. For example, a component called `MyButtonComponent` should be defined under the path `*/my-button/my-button.component.{html,ts,css,scss,...}`.
 
 ### filename-match-export
 

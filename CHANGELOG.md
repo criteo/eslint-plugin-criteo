@@ -9,6 +9,10 @@ Please see [the README](./README.md) for details of added rules.
 
 ## [Unreleased]
 
+### Changed
+
+- `criteo/filename` now also checks the component folder name
+
 ## [4.4.0]
 
 ### Added
