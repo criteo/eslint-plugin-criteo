@@ -149,6 +149,14 @@ Why?
 
 `@Select()` exposes an `Observable` that must be subscribed using the `async` pipe in the template. It makes it verbose and creates one subscription per usage. However, the `@ViewSelectSnapshot()` exposes the raw value directly and refreshes the view on every change ; making it more concise and easier to use.
 
+### no-null-undefined-comparison
+
+_Forbid comparisons with `null` and `undefined`._
+
+Why?
+
+The difference between `null` and `undefined` is specific to Javascript and can be tricky for juniors/backend developers. Most of the time, we don't need to distinguish these 2 values, so using `isNil` from _lodash_ is safer.
+
 ### ngxs-selector-array-length
 
 _Ensure that when using the @Selector() decorator, the number of selectors passed in matches the number of arguments passed to the selector function._

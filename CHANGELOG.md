@@ -9,6 +9,10 @@ Please see [the README](./README.md) for details of added rules.
 
 ## [Unreleased]
 
+### Added
+
+- `criteo/no-null-undefined-comparison`
+
 ## [4.5.0]
 
 ### Changed
