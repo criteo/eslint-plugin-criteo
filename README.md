@@ -174,6 +174,14 @@ Why?
 - By default, custom components are displayed as `inline` by the browser which is rarely what we expect. For example, it makes impossible to define a width or margins on them. E.g. `<my-component class="w-100 cds-mb-3"></my-component>` would have no effect.
 - The workaround of wrapping them in `<div></div>` should be avoided to not make the DOM and the bundle file heavier.
 
+### ngx-no-styles-in-component
+
+_Forbid using `styles` or `styleUrls` in a component's metadata: favour the Criteo design system instead._
+
+Why?
+
+To maintain a coherent user experience, we aim to use the classes and components from the shared component library as much as possible, as opposed to custom styles.
+
 ### no-ngxs-select-decorator
 
 _Forbid using the NGXS `@Select()` decorator: `@ViewSelectSnapshot()` should be preferred._
