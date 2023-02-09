@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Please see [the README](./README.md) for details of added rules.
 
+## Unreleased
+
+### Added
+
+- Recommended rules from `eslint-plugin-eslint-comments`
+- `eslint-comments/require-description`
+- Override of `eslint-comments/disable-enable-pair` to allow whole-file disables
+
 ## [4.6.0]
 
 ### Added
