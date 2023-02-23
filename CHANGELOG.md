@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Please see [the README](./README.md) for details of added rules.
 
+## Unreleased
+
+- `criteo/independent-folders`
+
 ## [4.7.0]
 
 ### Added

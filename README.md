@@ -127,6 +127,36 @@ Why?
 
 The name of the file should describe its content for readability.
 
+### independent-folders
+
+_Ensure feature folders are independent._
+
+Config:
+
+- `basePath`: base path (from the project) applied to all `featureFolders` and `sharedFolders` (default: `./`)
+- `featureFolders`: array of the feature folders paths that should remain independent (default: `[]`)
+- `sharedFolders`: array of the shared folders paths that cannot use any feature folder (default: `[]`)
+
+Sample :
+
+```
+'criteo/independent-folders': [
+  'error',
+  {
+    basePath: './src/app/',
+    featureFolders: ['broad-targeting-audience', 'similar-audience'],
+    sharedFolders: ['shared'],
+  },
+],
+```
+
+Why?
+
+To avoid messy and circular imports:
+
+- Feature folders should be independent or use each others using the public API.
+- Shared folders should not rely on feature folders.
+
 ### ngx-component-display
 
 _Ensure Angular components have a display property set._
@@ -200,7 +230,7 @@ In addition to the rules defined above, we have chosen some rules from external 
 Some of these have custom config to better address our specific use cases.
 
 | Library            | Rule name                                                                          | Documentation                                                                                                                                         | Applies to Angular applications | Applies to Angular libraries | Applies to React applications | Applies to React library |
-| ------------------ |------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------| ------------------------------- | ---------------------------- | ----------------------------- | ------------------------ |
+| ------------------ | ---------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------- | ---------------------------- | ----------------------------- | ------------------------ |
 | ESLint             | All recommended ESLint rules                                                       | https://eslint.org/docs/rules/                                                                                                                        | ✅                              | ✅                           | ✅                            | ✅                       |
 | TypeScript         | All recommended rules from `@typescript-eslint`                                    | https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin#supported-rules                                               | ✅                              | ✅                           | ✅                            | ✅                       |
 | Angular            | All recommended rules from `@angular-eslint`                                       | https://github.com/angular-eslint/angular-eslint/tree/master/packages/eslint-plugin/docs/rules                                                        | ✅                              | ✅                           |                               |                          |
