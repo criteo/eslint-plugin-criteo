@@ -17,6 +17,7 @@ Please see [the README](./README.md) for details of added rules.
 
 - `recommended-angular` extends `recommended` and adds Angular-specific rules; this is then extended by `recommended-angular-app` and `recommended-angular-lib`
 - New rule `ngx-no-styles-in-component`
+- Rule @angular-eslint/template/no-inline-styles
 
 ### Deprecated
 - `recommended-app`: prefer `recommended-angular-app`
