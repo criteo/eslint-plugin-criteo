@@ -16,6 +16,7 @@ Please see [the README](./README.md) for details of added rules.
 ### Added
 
 - `recommended-angular` extends `recommended` and adds Angular-specific rules; this is then extended by `recommended-angular-app` and `recommended-angular-lib`
+- New rule `ngx-no-styles-in-component`
 
 ### Deprecated
 - `recommended-app`: prefer `recommended-angular-app`
