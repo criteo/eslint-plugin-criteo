@@ -7,6 +7,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Please see [the README](./README.md) for details of added rules.
 
+## Unreleased
+
+### Changed
+
+- Removed Angular-specific rules from `recommended` to make it generic; `recommended-react` now extends `recommended`
+
+### Added
+
+- `recommended-angular` extends `recommended` and adds Angular-specific rules; this is then extended by `recommended-angular-app` and `recommended-angular-lib`
+
+### Deprecated
+- `recommended-app`: prefer `recommended-angular-app`
+- `recommended-lib`: prefer `recommended-angular-lib`
+- `recommended-template`: prefer `recommended-angular-template`
+
 ## [4.8.0]
 
 ### Added
