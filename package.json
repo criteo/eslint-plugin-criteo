@@ -25,9 +25,9 @@
     "npm": ">=7"
   },
   "peerDependencies": {
-    "@angular-eslint/eslint-plugin": "^13",
-    "@angular-eslint/eslint-plugin-template": "^13",
-    "@angular-eslint/template-parser": "^13",
+    "@angular-eslint/eslint-plugin": ">=13",
+    "@angular-eslint/eslint-plugin-template": ">=13",
+    "@angular-eslint/template-parser": ">=13",
     "@typescript-eslint/eslint-plugin": "^5",
     "@typescript-eslint/parser": "^5",
     "eslint": ">=8",
