@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Please see [the README](./README.md) for details of added rules.
 
+## [4.10.0]
+
+### Changed
+
+- Define minimal Angular version (compatible with v13+)
+
 ## [4.9.0]
 
 ### Changed
@@ -19,6 +25,7 @@ Please see [the README](./README.md) for details of added rules.
 - New rule `ngx-no-styles-in-component`
 
 ### Deprecated
+
 - `recommended-app`: prefer `recommended-angular-app`
 - `recommended-lib`: prefer `recommended-angular-lib`
 - `recommended-template`: prefer `recommended-angular-template`
