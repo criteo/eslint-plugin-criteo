@@ -132,7 +132,7 @@ The name of the file should describe its content for readability.
 
 ### independent-folders
 
-_Ensure feature folders are independent._
+_Ensure feature folders are independent by preventing imports between each other. Features folders imports are also forbidden from the shared modules._
 
 Config:
 
