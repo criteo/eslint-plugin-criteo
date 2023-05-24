@@ -206,6 +206,26 @@ Why?
 
 It can be tricky to pin down the source of an error when using the @Selector() decorator. While this rule can't make sure you put all the parameters in the right order, it does avoid the most obvious mistakes.
 
+### no-spreading-accumulators
+
+_Ensure that reducers do not mistakenly have O(n^2) complexity._
+
+Why?
+
+When using `.reduce()`, it may be tempting to do something like this for the sake of brevity:
+
+```
+const mappedById = myArray.reduce((acc, entity) => ({ ...acc, [entity.id]: entity }), {});
+```
+
+However, spreading the accumulator at every iteration results in an operation with O(n^2) time & spatial complexity. 
+
+This rule helps ensure that `.reduce()` is an O(n) operation. For example:
+
+```
+const mappedById = myArray.reduce((acc, entity) => { acc[entity.id] = entity; return acc; }, {});
+```
+
 ### no-todo-without-ticket
 
 _Ensure that comments with TODO or FIXME specify a JIRA ticket in which the work will be completed._
