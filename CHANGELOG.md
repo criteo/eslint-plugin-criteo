@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Please see [the README](./README.md) for details of added rules.
 
+## [4.11.1]
+
+### Changed
+
+- Fix rule `no-spreading-accumulators` with multiple spreads
+
 ## [4.11.0]
 
 ### Added
