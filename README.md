@@ -182,6 +182,14 @@ Why?
 
 To maintain a coherent user experience, we aim to use the classes and components from the shared component library as much as possible, as opposed to custom styles.
 
+### no-indexed-access-on-enums
+
+_Forbid accessing an enum thanks to an index: Enum[0]._
+
+Why?
+
+The names of the enum values should not be "data" in the context of the application at runtime. This brings a lack of clarity, a lack of readability, maintenance issues, and can be error-prone.
+
 ### no-ngxs-select-decorator
 
 _Forbid using the NGXS `@Select()` decorator: `@ViewSelectSnapshot()` should be preferred._
@@ -218,7 +226,7 @@ When using `.reduce()`, it may be tempting to do something like this for the sak
 const mappedById = myArray.reduce((acc, entity) => ({ ...acc, [entity.id]: entity }), {});
 ```
 
-However, spreading the accumulator at every iteration results in an operation with O(n^2) time & spatial complexity. 
+However, spreading the accumulator at every iteration results in an operation with O(n^2) time & spatial complexity.
 
 This rule helps ensure that `.reduce()` is an O(n) operation. For example:
 
