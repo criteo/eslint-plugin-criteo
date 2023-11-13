@@ -166,7 +166,7 @@ _Ensure Angular components have a display property set._
 
 Config:
 
-- `ignore`: classes whose names match this regular expression (defined as string) will be ignored (default: `'^.*DialogComponent$'`)
+- `ignore`: classes whose names match this regular expression (defined as string) will be ignored (default: `'^.*(?:Dialog|Modal)Component$'`)
 - `propertyName`: name of the display property (default: `'cdsDisplay'`)
 
 Why?
