@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Please see [the README](./README.md) for details of added rules.
 
+## [4.13.0]
+
+### Changed
+
+- Rule `no-indexed-access-on-enums` disabled due to the bug https://github.com/criteo/eslint-plugin-criteo/issues/30
+- Rule `ngx-component-display` now ignores components matching `^.*(?:Dialog|Modal)Component$` (previously, only `^.*DialogComponent$` were ignored)
+
 ## [4.12.0]
 
 ### Added
