@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Please see [the README](./README.md) for details of added rules.
 
+## [5.0.0]
+
+### Changed
+
+- [BREAKING] Angular 17 compatibility
+
 ## [4.13.0]
 
 ### Changed
