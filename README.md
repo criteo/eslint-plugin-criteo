@@ -176,7 +176,7 @@ Why?
 
 ### ngx-no-styles-in-component
 
-_Forbid using `styles` or `styleUrls` in a component's metadata: favour the Criteo design system instead._
+_Forbid using `styles`, `styleUrl` or `styleUrls` in a component's metadata: favour the Criteo design system instead._
 
 Why?
 
