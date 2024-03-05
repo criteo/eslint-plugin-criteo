@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Please see [the README](./README.md) for details of added rules.
 
+## [5.1.0]
+
+### Added
+
+- Enforce the usage of the `inject()` function for Dependency Injection in Angular with the rules `deny-constructor-di` and `import-inject-object` from `@rdlabo/eslint-plugin-rules`.
+- Enable the rule `no-empty-function` from `@typescript-eslint`
+- Forbid importing `HttpInterceptor` from `@angular/common/http` since functional HTTP interceptors should be preferred instead thanks to the rule `no-restricted-imports` from Typescript
+- Enable the rule `deprecation` from `eslint-plugin-deprecation`
+- Adapt the rules `filename` and `ngx-no-styles-in-component` to support the `styleUrl` property for Angular components
+
 ## [5.0.0]
 
 ### Changed
