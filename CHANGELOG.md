@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Please see [the README](./README.md) for details of added rules.
 
+## [5.1.1]
+
+### Changed
+
+- Removal of the rules `deny-constructor-di` and `import-inject-object` from `@rdlabo/eslint-plugin-rules` because the auto-fix has too many issues:
+  - It applies on irrelevant places cf https://github.com/rdlabo-team/eslint-plugin-rules/issues/1#issuecomment-1980955010
+  - It gets lost with access modifiers cf https://github.com/rdlabo-team/eslint-plugin-rules/issues/4
+  - It generates broken code cf https://github.com/rdlabo-team/eslint-plugin-rules/issues/5
+- Removal of deprecated configurations
+
 ## [5.1.0]
 
 ### Added
