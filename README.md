@@ -14,12 +14,12 @@ Like any library, keep it updated to make sure your project follows the latest c
 
 Add `criteo` to the plugins section of your `.eslintrc` configuration file and apply:
 
-- `plugin:criteo/recommended-angular-app` if the project is an Angular application (formerly, now deprecated, `recommended-app`)
-- `plugin:criteo/recommended-angular-lib` if the project is an Angular library (formerly, now deprecated, `recommended-lib`)
+- `plugin:criteo/recommended-angular-app` if the project is an Angular application
+- `plugin:criteo/recommended-angular-lib` if the project is an Angular library
 - `plugin:criteo/recommended-react-app` if the project is a React application
 - `plugin:criteo/recommended-react-lib` if the project is a React library
 - `plugin:criteo/recommended` for general-purpose rules which are included in all the above recommended configs
-- `plugin:criteo/recommended-angular-template` for Angular HTML templates (formerly, now deprecated, `recommended-template`)
+- `plugin:criteo/recommended-angular-template` for Angular HTML templates
 
 ```json
 {
