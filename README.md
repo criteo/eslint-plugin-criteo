@@ -204,7 +204,7 @@ _Forbid comparisons with `null` and `undefined`._
 
 Why?
 
-The difference between `null` and `undefined` is specific to Javascript and can be tricky for juniors/backend developers. Most of the time, we don't need to distinguish these 2 values, so using `isNil` from _lodash_ is safer.
+The difference between `null` and `undefined` is specific to Javascript and can be tricky for juniors/backend developers. Most of the time, we don't need to distinguish these 2 values, so using `isNil` from _lodash_ (or _criteo-angular-sdk_ for Criteos) is safer.
 
 ### ngxs-selector-array-length
 
