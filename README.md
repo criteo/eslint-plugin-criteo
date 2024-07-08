@@ -106,18 +106,6 @@ Unfortunately, the Cypress plugin's version only works when calling the function
 i.e. with `cy` in the same line. But in our code we often use helper functions, so the rule does not detect our usages.
 This new version of the rule leverages TypeScript to work out if the method is called on a `Cypress.Chainable` object.
 
-### filename
-
-_Ensure file names are valid and consistent._
-
-Config:
-
-- `pattern`: allowed name pattern (default: `/^[a-z0-9\.\-]+$/`)
-
-Why?
-
-Improve the file tree readability. For example, a component called `MyButtonComponent` should be defined under the path `*/my-button/my-button.component.{html,ts,css,scss,...}`.
-
 ### filename-match-export
 
 _Ensure file names reflect the named exported members._
@@ -129,6 +117,18 @@ Config:
 Why?
 
 The name of the file should describe its content for readability.
+
+### filename
+
+_Ensure file names are valid and consistent._
+
+Config:
+
+- `pattern`: allowed name pattern (default: `/^[a-z0-9\.\-]+$/`)
+
+Why?
+
+Improve the file tree readability. For example, a component called `MyButtonComponent` should be defined under the path `*/my-button/my-button.component.{html,ts,css,scss,...}`.
 
 ### independent-folders
 
@@ -182,6 +182,14 @@ Why?
 
 To maintain a coherent user experience, we aim to use the classes and components from the shared component library as much as possible, as opposed to custom styles.
 
+### ngxs-selector-array-length
+
+_Ensure that when using the @Selector() decorator, the number of selectors passed in matches the number of arguments passed to the selector function._
+
+Why?
+
+It can be tricky to pin down the source of an error when using the @Selector() decorator. While this rule can't make sure you put all the parameters in the right order, it does avoid the most obvious mistakes.
+
 ### no-indexed-access-on-enums
 
 _Forbid accessing an enum thanks to an index: Enum[0]._
@@ -205,14 +213,6 @@ _Forbid comparisons with `null` and `undefined`._
 Why?
 
 The difference between `null` and `undefined` is specific to Javascript and can be tricky for juniors/backend developers. Most of the time, we don't need to distinguish these 2 values, so using `isNil` from _lodash_ (or _criteo-angular-sdk_ for Criteos) is safer.
-
-### ngxs-selector-array-length
-
-_Ensure that when using the @Selector() decorator, the number of selectors passed in matches the number of arguments passed to the selector function._
-
-Why?
-
-It can be tricky to pin down the source of an error when using the @Selector() decorator. While this rule can't make sure you put all the parameters in the right order, it does avoid the most obvious mistakes.
 
 ### no-spreading-accumulators
 
