@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Please see [the README](./README.md) for details of added rules.
 
+## [5.2.0]
+
+- Reorganize the README file to list rules in alphabetical order
+- Revise the documentation for the `no-ngxs-select-decorator` rule
+- Include documentation links in error messages
+
 ## [5.1.3]
 
 - Mention that `isNil` is also available in `criteo-angular-sdk` (private package)
