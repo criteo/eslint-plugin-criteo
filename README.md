@@ -196,7 +196,7 @@ _Forbid using the NGXS `@Select()` decorator: `@ViewSelectSnapshot()` should be 
 
 Why?
 
-`@Select()` exposes an `Observable` that must be subscribed using the `async` pipe in the template. It makes it verbose and creates one subscription per usage. However, the `@ViewSelectSnapshot()` exposes the raw value directly and refreshes the view on every change ; making it more concise and easier to use.
+`@Select()` exposes an `Observable` that requires subscription via the `async` pipe in the template, leading to verbosity and potentially multiple subscriptions. On the other hand, `@ViewSelectSnapshot()` provides direct access to the raw value and updates the view automatically on every change, offering a more concise and user-friendly experience. While the preferred approach according to best practices is to encapsulate all logic within selectors, there are situations where reacting to changes in the component class may still be necessary. In this case, prefer `this.store.select()`.
 
 ### no-null-undefined-comparison
 
