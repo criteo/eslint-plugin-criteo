@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Please see [the README](./README.md) for details of added rules.
 
+## [5.2.1]
+
+- Fix the rule `filename-match-export`: some export statements were (wrongly) ignored. Closes #31.
+
 ## [5.2.0]
 
 - Reorganize the README file to list rules in alphabetical order
