@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Please see [the README](./README.md) for details of added rules.
 
+## Pending changes
+
+- Use `eslint-plugin-cypress` version below 4, as versions from 4.0.0 onward require ESLint v9, which is not yet supported by `eslint-plugin-criteo`.
+
 ## [5.3.0]
 
 - Disable the rule `no-call-expression` from `@angular-eslint/eslint-plugin-template` to allow using [signals](https://angular.dev/guide/signals)
