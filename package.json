@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-criteo",
-  "version": "5.3.0",
+  "version": "5.3.1",
   "description": "An opinionated collection of ESLint shared configs and rules used by Criteo.",
   "keywords": [
     "eslint",

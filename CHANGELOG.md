@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Please see [the README](./README.md) for details of added rules.
 
-## Pending changes
+## [5.3.1]
 
 - Use `eslint-plugin-cypress` version below 4, as versions from 4.0.0 onward require ESLint v9, which is not yet supported by `eslint-plugin-criteo`.
 
