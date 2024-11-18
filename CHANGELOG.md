@@ -15,6 +15,10 @@ Please see [the README](./README.md) for details of added rules.
   - eslint-plugin-node is no no longer maintained, eslint-plugin-n is a fork
 - no-spreading-accumulators - pass error message in to remove eslint-plugin/prefer-message-ids lint error
 
+## [5.3.1]
+
+- Use `eslint-plugin-cypress` version below 4, as versions from 4.0.0 onward require ESLint v9, which is not yet supported by `eslint-plugin-criteo`.
+
 ## [5.3.0]
 
 - Disable the rule `no-call-expression` from `@angular-eslint/eslint-plugin-template` to allow using [signals](https://angular.dev/guide/signals)

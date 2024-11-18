@@ -32,7 +32,7 @@
     "@typescript-eslint/eslint-plugin": ">= 7",
     "@typescript-eslint/parser": ">= 7",
     "eslint": ">= 8",
-    "eslint-plugin-cypress": ">= 2",
+    "eslint-plugin-cypress": ">= 2 <4",
     "eslint-plugin-deprecation": ">= 2",
     "eslint-plugin-eslint-comments": ">= 3",
     "eslint-plugin-no-only-tests": ">= 3",
