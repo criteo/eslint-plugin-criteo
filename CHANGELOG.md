@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Please see [the README](./README.md) for details of added rules.
 
+## 5.4.0
+
+- no-indexed-access-on-enums - fix missing import that caused eslint to crash when using this rule
+- Mark Angular and Typescript peerDependencies as optional
+- Switch from eslint-plugin-node to eslint-plugin-n
+  - eslint-plugin-node is no no longer maintained, eslint-plugin-n is a fork
+- no-spreading-accumulators - pass error message in to remove eslint-plugin/prefer-message-ids lint error
+
 ## [5.3.1]
 
 - Use `eslint-plugin-cypress` version below 4, as versions from 4.0.0 onward require ESLint v9, which is not yet supported by `eslint-plugin-criteo`.
@@ -38,9 +46,9 @@ Please see [the README](./README.md) for details of added rules.
 ### Changed
 
 - Removal of the rules `deny-constructor-di` and `import-inject-object` from `@rdlabo/eslint-plugin-rules` because the auto-fix has too many issues:
-  - It applies on irrelevant places cf https://github.com/rdlabo-team/eslint-plugin-rules/issues/1#issuecomment-1980955010
-  - It gets lost with access modifiers cf https://github.com/rdlabo-team/eslint-plugin-rules/issues/4
-  - It generates broken code cf https://github.com/rdlabo-team/eslint-plugin-rules/issues/5
+  - It applies on irrelevant places cf <https://github.com/rdlabo-team/eslint-plugin-rules/issues/1#issuecomment-1980955010>
+  - It gets lost with access modifiers cf <https://github.com/rdlabo-team/eslint-plugin-rules/issues/4>
+  - It generates broken code cf <https://github.com/rdlabo-team/eslint-plugin-rules/issues/5>
 - Removal of deprecated configurations
 
 ## [5.1.0]
@@ -63,7 +71,7 @@ Please see [the README](./README.md) for details of added rules.
 
 ### Changed
 
-- Rule `no-indexed-access-on-enums` disabled due to the bug https://github.com/criteo/eslint-plugin-criteo/issues/30
+- Rule `no-indexed-access-on-enums` disabled due to the bug <https://github.com/criteo/eslint-plugin-criteo/issues/30>
 - Rule `ngx-component-display` now ignores components matching `^.*(?:Dialog|Modal)Component$` (previously, only `^.*DialogComponent$` were ignored)
 
 ## [4.12.0]
@@ -169,7 +177,7 @@ Please see [the README](./README.md) for details of added rules.
 ### Changed
 
 - [BREAKING] Upgrade Angular plugins to version 13 for compatibility with Angular 13
-- [BREAKING] Move dependent plugins to peerDependencies so that they appear in the root node_modules (https://github.com/criteo/eslint-plugin-criteo/issues/15)
+- [BREAKING] Move dependent plugins to peerDependencies so that they appear in the root node_modules (<https://github.com/criteo/eslint-plugin-criteo/issues/15>)
 - [BREAKING] Update `engines` field in package.json to only allow npm versions >= 7
 
 ## [3.2.1]
