@@ -10,7 +10,9 @@
   "author": "Criteo",
   "main": "lib/index.js",
   "scripts": {
-    "build": "echo Nothing to do"
+    "build": "echo Nothing to do",
+    "lint": "npx prettier . --check",
+    "lint:fix": "npx prettier . --write"
   },
   "dependencies": {
     "requireindex": "1.2.0"
@@ -19,7 +21,7 @@
     "eslint": "8.57.1",
     "eslint-plugin-eslint-plugin": "6.2.0",
     "eslint-plugin-n": "17.11.1",
-    "prettier": "3.3.3"
+    "prettier": "3.4.2"
   },
   "engines": {
     "node": ">=18",
