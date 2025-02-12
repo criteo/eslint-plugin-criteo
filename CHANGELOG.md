@@ -7,6 +7,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Please see [the README](./README.md) for details of added rules.
 
+## Pending changes
+
+- eslint v8 -> v9
+- @angular-eslint/\* v17 -> angular-eslint v19
+- @typescript-eslint/\* v7 -> typescript-eslint v8
+- eslint-plugin-cypress v2/3 -> eslint-plugin-cypress v4
+- Removal of eslint-plugin-deprecation (deprecation/deprecation -> @typescript-eslint/no-deprecated)
+- eslint-plugin-eslint-comments -> @eslint-community/eslint-plugin-eslint-comments
+- React: TODO
+- eslint-plugin-rxjs -> @rxlint/eslint-plugin
+- eslint-plugin-rxjs-angular -> @rxlint/eslint-plugin-angular
+- typescript v4 -> v5
+- Use ES modules
+
 ## 5.4.0
 
 - no-indexed-access-on-enums - fix missing import that caused eslint to crash when using this rule
