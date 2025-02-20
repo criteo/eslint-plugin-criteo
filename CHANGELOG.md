@@ -7,19 +7,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Please see [the README](./README.md) for details of added rules.
 
-## Pending changes
+## 6.0.0
 
-- eslint v8 -> v9
-- @angular-eslint/\* v17 -> angular-eslint v19
-- @typescript-eslint/\* v7 -> typescript-eslint v8
-- eslint-plugin-cypress v2/3 -> eslint-plugin-cypress v4
-- Removal of eslint-plugin-deprecation (deprecation/deprecation -> @typescript-eslint/no-deprecated)
-- eslint-plugin-eslint-comments -> @eslint-community/eslint-plugin-eslint-comments
-- React: TODO
-- eslint-plugin-rxjs -> @rxlint/eslint-plugin
-- eslint-plugin-rxjs-angular -> @rxlint/eslint-plugin-angular
-- typescript v4 -> v5
-- Use ES modules
+- Update eslint v8 to v9
+- Update typescript v4 to v5
+- Update eslint-plugin-cypress v2/3 to eslint-plugin-cypress v4
+- Replace @angular-eslint/\* by angular-eslint
+- Replace @typescript-eslint/\* by typescript-eslint
+- Replace eslint-plugin-eslint-comments by @eslint-community/eslint-plugin-eslint-comments
+- Replace eslint-plugin-rxjs by @rxlint/eslint-plugin
+- Replace eslint-plugin-rxjs-angular by @rxlint/eslint-plugin-angular
+- Remove eslint-plugin-deprecation (replaced by @typescript-eslint/no-deprecated)
+- Remove everything about React (TODO)
+- Use ES modules instead of CommonJS
 
 ## 5.4.0
 
