@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Please see [the README](./README.md) for details of added rules.
 
+## Pending changes
+
+- Replace @rxlint/eslint-plugin by eslint-plugin-rxjs-updated
+- Replace @rxlint/eslint-plugin-angular by eslint-plugin-rxjs-angular-updated
+
 ## 6.0.0
 
 - Update eslint v8 to v9

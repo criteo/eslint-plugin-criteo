@@ -275,15 +275,15 @@ In addition to the rules defined above, we have chosen some rules from external 
 
 External plugins are defined with aliases:
 
-- `angular-eslint` (tsPlugin): `@angular-eslint`
-- `angular-eslint` (templatePlugin): `@angular-eslint/template`
 - `@eslint-community/eslint-plugin-eslint-comments`: `@eslint-community/eslint-comments` and `eslint-comments` (for backward compatibility with `eslint-plugin-eslint-comments`)
-- `@rxlint/eslint-plugin`: `@rxlint` and `rxjs` (for backward compatibility with `eslint-plugin-rxjs`)
-- `@rxlint/eslint-plugin-angular`: `@rxlint-angular` and `rxjs-angular` (for backward compatibility with `eslint-plugin-rxjs-angular`)
-- `typescript-eslint`: `@typescript-eslint`
-- `eslint-plugin-no-only-tests`: `no-only-tests`
-- `eslint-plugin-simple-import-sort`: `simple-import-sort`
+- `angular-eslint` (templatePlugin): `@angular-eslint/template`
+- `angular-eslint` (tsPlugin): `@angular-eslint`
 - `eslint-plugin-cypress`: `cypress`
+- `eslint-plugin-no-only-tests`: `no-only-tests`
+- `eslint-plugin-rxjs-angular-updated`: `rxjs-angular`
+- `eslint-plugin-rxjs-updated`: `rxjs`
+- `eslint-plugin-simple-import-sort`: `simple-import-sort`
+- `typescript-eslint`: `@typescript-eslint`
 
 | Package                                           | Rule and documentation                                                                                                                                                                 | Recommended | Angular App | Angular lib | Angular template |
 | ------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ----------- | ----------- | ---------------- |
@@ -291,10 +291,10 @@ External plugins are defined with aliases:
 | `@eslint-community/eslint-plugin-eslint-comments` | [`disable-enable-pair`](https://eslint-community.github.io/eslint-plugin-eslint-comments/rules/disable-enable-pair.html) (with custom config)                                          | ✅          | ✅          | ✅          |
 | `@eslint-community/eslint-plugin-eslint-comments` | [`require-description`](https://eslint-community.github.io/eslint-plugin-eslint-comments/rules/require-description.html)                                                               | ✅          | ✅          | ✅          |
 | `@eslint/js`                                      | [All recommended rules](https://eslint.org/docs/latest/rules/)                                                                                                                         | ✅          | ✅          | ✅          |
-| `@rxlint/eslint-plugin-angular`                   | [`prefer-takeuntil`](https://github.com/manbearwiz/eslint-plugin-rxjs-angular/blob/main/docs/rules/prefer-takeuntil.md) (with custom config)                                           |             | ✅          | ✅          |
-| `@rxlint/eslint-plugin`                           | [All recommended rules](https://github.com/manbearwiz/eslint-plugin-rxjs?tab=readme-ov-file#rules)                                                                                     | ✅          | ✅          | ✅          |
-| `@rxlint/eslint-plugin`                           | [`finnish`](https://github.com/manbearwiz/eslint-plugin-rxjs/blob/main/docs/rules/finnish.md) (with custom config)                                                                     | ✅          | ✅          | ✅          |
-| `@rxlint/eslint-plugin`                           | [`no-unsafe-takeuntil`](https://github.com/manbearwiz/eslint-plugin-rxjs/blob/main/docs/rules/no-unsafe-takeuntil.md) (with custom config)                                             | ✅          | ✅          | ✅          |
+| `eslint-plugin-rxjs-angular-updated`              | [`prefer-takeuntil`](https://github.com/fast-facts/eslint-plugin-rxjs-angular/blob/master/docs/rules/prefer-takeuntil.md) (with custom config)                                         |             | ✅          | ✅          |
+| `eslint-plugin-rxjs-updated`                      | [All recommended rules](https://github.com/fast-facts/eslint-plugin-rxjs/blob/master/README.md#rules)                                                                                  | ✅          | ✅          | ✅          |
+| `eslint-plugin-rxjs-updated`                      | [`finnish`](https://github.com/fast-facts/eslint-plugin-rxjs/blob/master/docs/rules/finnish.md) (with custom config)                                                                   | ✅          | ✅          | ✅          |
+| `eslint-plugin-rxjs-updated`                      | [`no-unsafe-takeuntil`](https://github.com/fast-facts/eslint-plugin-rxjs/blob/master/docs/rules/no-unsafe-takeuntil.md) (with custom config)                                           | ✅          | ✅          | ✅          |
 | `angular-eslint`                                  | [All recommended rules](https://github.com/angular-eslint/angular-eslint/blob/main/packages/eslint-plugin-template/README.md)                                                          |             |             |             | ✅               |
 | `angular-eslint`                                  | [All recommended rules](https://github.com/angular-eslint/angular-eslint/blob/main/packages/eslint-plugin/README.md)                                                                   |             | ✅          | ✅          |                  |
 | `angular-eslint`                                  | [`alt-text`](https://github.com/angular-eslint/angular-eslint/blob/main/packages/eslint-plugin-template/docs/rules/alt-text.md)                                                        |             |             |             | ✅               |
