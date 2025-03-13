@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Please see [the README](./README.md) for details of added rules.
 
+## Pending changes
+
+- Enable new Angular rules un the criteo-setup-angular-app config:
+  - @angular-eslint/prefer-standalone
+  - @angular-eslint/template/prefer-control-flow
+  - @angular-eslint/template/prefer-self-closing-tags
+
 ## 6.1.0
 
 - Replace @rxlint/eslint-plugin by eslint-plugin-rxjs-updated
