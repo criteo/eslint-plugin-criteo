@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Please see [the README](./README.md) for details of added rules.
 
-## Pending changes
+## 6.2.0
 
 - Enable new Angular rules un the criteo-setup-angular-app config:
   - @angular-eslint/prefer-standalone
