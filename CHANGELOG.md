@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Please see [the README](./README.md) for details of added rules.
 
+## Unpublished
+
+- Update `rxjs-angular/prefer-takeuntil` rule to support Angular's `takeUntilDestroyed` function
+
 ## 6.2.0
 
 - Enable new Angular rules un the criteo-setup-angular-app config:
