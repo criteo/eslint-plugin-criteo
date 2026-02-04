@@ -1,6 +1,5 @@
-import rule from '../../lib/rules/cypress-no-force.js';
-import { typedRuleTester, untypedRuleTester } from '../rule-tester';
-import type { RuleModule } from '@typescript-eslint/utils/ts-eslint';
+import rule from '../../src/rules/cypress-no-force.js';
+import { typedRuleTester, untypedRuleTester } from '../rule-tester.js';
 
 const cypressPrelude = `
   declare namespace Cypress {
@@ -21,7 +20,7 @@ const cypressPrelude = `
   declare const cy: Cypress.Chainable;
 `;
 
-untypedRuleTester.run('cypress-no-force (untyped)', rule as RuleModule<string, readonly unknown[]>, {
+untypedRuleTester.run('cypress-no-force (untyped)', rule, {
   valid: [
     // Should not crash when type-services are not available.
     'const element = { click: (_options?: { force?: boolean }) => {} }; element.click({ force: true });',
@@ -29,7 +28,7 @@ untypedRuleTester.run('cypress-no-force (untyped)', rule as RuleModule<string, r
   invalid: [],
 });
 
-typedRuleTester.run('cypress-no-force', rule as RuleModule<string, readonly unknown[]>, {
+typedRuleTester.run('cypress-no-force', rule, {
   valid: [
     {
       code: `${cypressPrelude} cy.click();`,

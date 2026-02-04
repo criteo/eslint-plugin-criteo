@@ -14,7 +14,7 @@
     "noUncheckedIndexedAccess": true,
     "noImplicitOverride": true,
 
-    "module": "preserve",
+    "module": "NodeNext",
     "noEmit": true
   },
   "include": ["src/**/*", "tests/**/*"]

@@ -56,7 +56,7 @@ Available configurations are:
 
 ## Pre-commit Git hook
 
-As a developer, it can be very frustrating to get a change rejected by QA bot because the code does not respect an ES lint rule. Even more if the failing rule has an auto-fix! To avoid it, you can configure your project to run ES lint automatically on pre-commit. Because it will target only staged files, it is quite fast!
+As a developer, it can be very frustrating to get a change rejected by QA bot because the code does not respect an ESLint rule. Even more if the failing rule has an auto-fix! To avoid it, you can configure your project to run ESLint automatically on pre-commit. Because it will target only staged files, it is quite fast!
 
 1. Define the pre-commit hook script `.git-hook-lint-staged` at the root of the first/main UI project of the repository. It will make it available to all developers since Git hooks cannot be pushed directly.
 

@@ -1,8 +1,8 @@
 import pluginAngular from 'angular-eslint';
-import { buildConfig, tsConfigBase } from '../utils.js';
+import { buildConfig, tsConfigBase, type ConfigObject, type PluginMap } from '../utils.js';
 import { recommended } from './recommended.js';
 
-export const recommendedAngular = (plugins) =>
+export const recommendedAngular = (plugins: PluginMap): ConfigObject[] =>
   buildConfig([
     recommended(plugins),
     pluginAngular.configs.tsRecommended,

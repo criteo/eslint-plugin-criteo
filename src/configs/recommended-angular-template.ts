@@ -1,7 +1,7 @@
 import pluginAngular from 'angular-eslint';
-import { buildConfig } from '../utils.js';
+import { buildConfig, type ConfigObject, type PluginMap } from '../utils.js';
 
-export const recommendedAngularTemplate = (plugins) =>
+export const recommendedAngularTemplate = (plugins: PluginMap): ConfigObject[] =>
   buildConfig([
     pluginAngular.configs.templateRecommended,
     {

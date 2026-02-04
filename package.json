@@ -10,8 +10,10 @@
   ],
   "author": "Criteo",
   "type": "module",
+  "types": "./lib/index.d.ts",
   "exports": {
     ".": {
+      "types": "./lib/index.d.ts",
       "import": "./lib/index.js",
       "default": "./lib/index.js"
     },
@@ -21,27 +23,29 @@
     "lib",
     "LICENSE",
     "README.md",
-    "README-v5.md",
     "CHANGELOG.md"
   ],
   "scripts": {
-    "build": "echo Nothing to do",
+    "clean": "rm -rf lib",
+    "build": "npm run clean && tsc -p tsconfig.build.json",
     "compile-check": "tsc",
     "lint": "eslint && npx prettier . --check",
     "lint:fix": "eslint --fix && npx prettier . --write",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "prepack": "npm run build"
   },
   "devDependencies": {
-    "@types/node": "20.15.0",
-    "@typescript-eslint/utils": "8.56.0",
-    "@typescript-eslint/rule-tester": "8.56.0",
+    "@types/node": "24.1.0",
+    "@typescript-eslint/utils": "8.56.1",
+    "@typescript-eslint/rule-tester": "8.56.1",
+    "@vitest/eslint-plugin": "1.6.9",
     "eslint": "9.39.2",
     "eslint-plugin-eslint-plugin": "7.3.1",
     "eslint-plugin-n": "17.24.0",
     "globals": "17.3.0",
     "prettier": "3.8.1",
-    "typescript": "5.8.3",
+    "typescript": "5.9.3",
     "vitest": "4.0.18"
   },
   "engines": {
@@ -53,10 +57,10 @@
     "@eslint/js": "^9.20.0",
     "angular-eslint": "^19.1.0",
     "eslint": "^9.20.1",
-    "eslint-plugin-cypress": "^4.1.0",
+    "eslint-plugin-cypress": "^6.1.0",
     "eslint-plugin-no-only-tests": "^3.3.0",
     "eslint-plugin-react": "^7.37.4",
-    "eslint-plugin-react-hooks": "^5.1.0",
+    "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-rxjs-angular-updated": "^1.0.36",
     "eslint-plugin-rxjs-updated": "^1.0.36",
     "eslint-plugin-simple-import-sort": "^12.1.1",

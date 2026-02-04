@@ -1,8 +1,13 @@
-import rule from '../../lib/rules/independent-folders.js';
-import { untypedRuleTester } from '../rule-tester';
-import type { RuleModule } from '@typescript-eslint/utils/ts-eslint';
+import rule from '../../src/rules/independent-folders.js';
+import { untypedRuleTester } from '../rule-tester.js';
 
-const baseOptions = [
+const baseOptions: [
+  {
+    basePath: string;
+    featureFolders: string[];
+    sharedFolders: string[];
+  },
+] = [
   {
     basePath: '/project',
     featureFolders: ['feature-a', 'feature-b'],
@@ -10,7 +15,7 @@ const baseOptions = [
   },
 ];
 
-untypedRuleTester.run('independent-folders', rule as RuleModule<string, readonly unknown[]>, {
+untypedRuleTester.run('independent-folders', rule, {
   valid: [
     {
       code: "import local from './local';",

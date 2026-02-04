@@ -1,8 +1,7 @@
-import rule from '../../lib/rules/no-null-undefined-comparison.js';
-import { untypedRuleTester } from '../rule-tester';
-import type { RuleModule } from '@typescript-eslint/utils/ts-eslint';
+import rule from '../../src/rules/no-null-undefined-comparison.js';
+import { untypedRuleTester } from '../rule-tester.js';
 
-untypedRuleTester.run('no-null-undefined-comparison', rule as RuleModule<string, readonly unknown[]>, {
+untypedRuleTester.run('no-null-undefined-comparison', rule, {
   valid: ['if (foo === 0) {}', 'if (bar != 42) {}', 'if (foo > 0) {}'],
   invalid: [
     { code: 'if (foo === null) {}', errors: [{ messageId: 'default' }] },

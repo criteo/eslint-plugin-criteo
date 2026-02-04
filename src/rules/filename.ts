@@ -1,17 +1,35 @@
-/**
- * @fileoverview filename
- * @author Xavier Dupessey
- */
-'use strict';
-
 import path from 'node:path';
+import { AST_NODE_TYPES, type TSESLint, type TSESTree } from '@typescript-eslint/utils';
 import { COMPONENT_SELECTOR, STYLE_URL_SELECTOR, STYLE_URLS_SELECTOR, TEMPLATE_URL_SELECTOR } from '../utils.js';
 
 const VALID_NAME_REGEX = /^[a-z0-9.-]+$/;
+const moreInfo = 'More info: https://github.com/criteo/eslint-plugin-criteo#filename';
 
-const moreInfo = `More info: https://github.com/criteo/eslint-plugin-criteo#filename`;
+type MessageIds = 'invalidPattern' | 'inconsistent' | 'componentFolder';
+type Docs = { recommended: 'error' };
+type RuleOptions = { pattern?: string };
+type Options = [RuleOptions?];
 
-export default {
+function getStaticString(node: TSESTree.Node | null | undefined): string | undefined {
+  if (!node) {
+    return undefined;
+  }
+
+  if (node.type === AST_NODE_TYPES.Literal && typeof node.value === 'string') {
+    return node.value;
+  }
+
+  if (node.type === AST_NODE_TYPES.TemplateLiteral && node.expressions.length === 0 && node.quasis.length === 1) {
+    const quasi = node.quasis[0];
+    if (quasi) {
+      return quasi.value.cooked ?? undefined;
+    }
+  }
+
+  return undefined;
+}
+
+const rule: TSESLint.RuleModule<MessageIds, Options, Docs> = {
   meta: {
     type: 'problem',
     docs: {
@@ -26,35 +44,34 @@ export default {
     defaultOptions: [{}],
     schema: [
       {
+        description: 'Optional configuration for filename validation.',
         type: 'object',
         properties: {
           pattern: {
             type: 'string',
-            description: 'Regular expression string used to validate file names.',
+            description: 'Regular expression source used to validate the current file name.',
           },
         },
         additionalProperties: false,
       },
     ],
   },
-
   create(context) {
-    const options = context.options[0] || {};
-    const pattern = options.pattern ? new RegExp(options.pattern) : VALID_NAME_REGEX;
-
-    const filename = path.parse(context.getFilename());
+    const options = context.options[0];
+    const pattern = options?.pattern ? new RegExp(options.pattern) : VALID_NAME_REGEX;
+    const filename = path.parse(context.filename);
 
     return {
-      Program: function (node) {
+      Program(node: TSESTree.Program): void {
         if (!pattern.test(filename.name)) {
-          return context.report({
-            data: { filename: filename.base, pattern },
+          context.report({
+            data: { filename: filename.base, pattern: pattern.toString() },
             messageId: 'invalidPattern',
             node,
           });
         }
       },
-      [TEMPLATE_URL_SELECTOR]: function (node) {
+      [TEMPLATE_URL_SELECTOR](node: TSESTree.Property): void {
         const templatePath = getStaticString(node.value);
         if (!templatePath) {
           return;
@@ -62,14 +79,14 @@ export default {
 
         const template = path.parse(templatePath);
         if (template.name !== filename.name) {
-          return context.report({
+          context.report({
             data: { expected: filename.base, received: template.base },
             messageId: 'inconsistent',
             node,
           });
         }
       },
-      [STYLE_URL_SELECTOR]: function (node) {
+      [STYLE_URL_SELECTOR](node: TSESTree.Property): void {
         const stylePath = getStaticString(node.value);
         if (!stylePath) {
           return;
@@ -77,39 +94,43 @@ export default {
 
         const styleUrl = path.parse(stylePath);
         if (styleUrl.name !== filename.name) {
-          return context.report({
+          context.report({
             data: { expected: filename.base, received: styleUrl.base },
             messageId: 'inconsistent',
             node,
           });
         }
       },
-      [STYLE_URLS_SELECTOR]: function (node) {
-        const styleUrls = node.value.elements;
-        if (styleUrls.length === 0) {
+      [STYLE_URLS_SELECTOR](node: TSESTree.Property): void {
+        if (node.value.type !== AST_NODE_TYPES.ArrayExpression || node.value.elements.length === 0) {
           return;
         }
 
-        const stylePath = getStaticString(styleUrls[0]);
+        const firstStyleElement = node.value.elements[0];
+        if (!firstStyleElement) {
+          return;
+        }
+
+        const stylePath = getStaticString(firstStyleElement);
         if (!stylePath) {
           return;
         }
 
         const styleUrl = path.parse(stylePath);
         if (styleUrl.name !== filename.name) {
-          return context.report({
+          context.report({
             data: { expected: filename.base, received: styleUrl.base },
             messageId: 'inconsistent',
             node,
           });
         }
       },
-      [COMPONENT_SELECTOR]: function (node) {
-        const componentDir = filename.dir.split(path.sep).slice(-1)[0];
+      [COMPONENT_SELECTOR](node: TSESTree.Decorator): void {
+        const componentDir = filename.dir.split(path.sep).at(-1) ?? '';
         const expectedDir = filename.name.replace('.component', '');
 
         if (componentDir !== expectedDir) {
-          return context.report({
+          context.report({
             data: { dirname: expectedDir },
             messageId: 'componentFolder',
             node,
@@ -120,18 +141,4 @@ export default {
   },
 };
 
-function getStaticString(node) {
-  if (!node) {
-    return undefined;
-  }
-
-  if (node.type === 'Literal' && typeof node.value === 'string') {
-    return node.value;
-  }
-
-  if (node.type === 'TemplateLiteral' && node.expressions.length === 0 && node.quasis.length === 1) {
-    return node.quasis[0].value.cooked;
-  }
-
-  return undefined;
-}
+export default rule;

@@ -1,8 +1,7 @@
-import rule from '../../lib/rules/no-ngxs-select-decorator.js';
-import { untypedRuleTester } from '../rule-tester';
-import type { RuleModule } from '@typescript-eslint/utils/ts-eslint';
+import rule from '../../src/rules/no-ngxs-select-decorator.js';
+import { untypedRuleTester } from '../rule-tester.js';
 
-untypedRuleTester.run('no-ngxs-select-decorator', rule as RuleModule<string, readonly unknown[]>, {
+untypedRuleTester.run('no-ngxs-select-decorator', rule, {
   valid: [
     {
       code: 'class TestComponent { @ViewSelectSnapshot() value!: string; }',
