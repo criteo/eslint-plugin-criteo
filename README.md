@@ -34,7 +34,7 @@ export default [
 
 - With helper:
 
-We provide an helper `buildConfig()` allowing to override settings and flatten nested arrays:
+We provide a helper `buildConfig()` allowing to override settings and flatten nested arrays:
 
 ```js
 import pluginCriteo, { buildConfig } from "eslint-plugin-criteo";
