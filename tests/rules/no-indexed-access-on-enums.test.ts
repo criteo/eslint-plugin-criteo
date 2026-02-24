@@ -1,8 +1,7 @@
-import rule from '../../lib/rules/no-indexed-access-on-enums.js';
-import { typedRuleTester, untypedRuleTester } from '../rule-tester';
-import type { RuleModule } from '@typescript-eslint/utils/ts-eslint';
+import rule from '../../src/rules/no-indexed-access-on-enums.js';
+import { typedRuleTester, untypedRuleTester } from '../rule-tester.js';
 
-untypedRuleTester.run('no-indexed-access-on-enums (untyped)', rule as RuleModule<string, readonly unknown[]>, {
+untypedRuleTester.run('no-indexed-access-on-enums (untyped)', rule, {
   valid: [
     // Ensures the rule is a no-op when parserServices are unavailable.
     "const map = { A: 0 }; const value = map['A'];",
@@ -10,7 +9,7 @@ untypedRuleTester.run('no-indexed-access-on-enums (untyped)', rule as RuleModule
   invalid: [],
 });
 
-typedRuleTester.run('no-indexed-access-on-enums', rule as RuleModule<string, readonly unknown[]>, {
+typedRuleTester.run('no-indexed-access-on-enums', rule, {
   valid: [
     // Non-computed enum member access should be ignored.
     'enum Status { Ok, Ko } const value = Status.Ok;',

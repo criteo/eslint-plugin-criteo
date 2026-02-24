@@ -1,8 +1,7 @@
-import rule from '../../lib/rules/filename.js';
-import { untypedRuleTester } from '../rule-tester';
-import type { RuleModule } from '@typescript-eslint/utils/ts-eslint';
+import rule from '../../src/rules/filename.js';
+import { untypedRuleTester } from '../rule-tester.js';
 
-untypedRuleTester.run('filename', rule as RuleModule<string, readonly unknown[]>, {
+untypedRuleTester.run('filename', rule, {
   valid: [
     {
       code: 'const value = 1;',

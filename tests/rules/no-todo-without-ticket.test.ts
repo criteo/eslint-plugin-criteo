@@ -1,8 +1,7 @@
-import rule from '../../lib/rules/no-todo-without-ticket.js';
-import { untypedRuleTester } from '../rule-tester';
-import type { RuleModule } from '@typescript-eslint/utils/ts-eslint';
+import rule from '../../src/rules/no-todo-without-ticket.js';
+import { untypedRuleTester } from '../rule-tester.js';
 
-untypedRuleTester.run('no-todo-without-ticket', rule as RuleModule<string, readonly unknown[]>, {
+untypedRuleTester.run('no-todo-without-ticket', rule, {
   valid: [
     `const x = 1;`,
     `// This is a regular comment`,

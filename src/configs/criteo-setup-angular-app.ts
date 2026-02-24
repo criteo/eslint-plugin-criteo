@@ -1,8 +1,8 @@
-import { buildConfig } from '../utils.js';
+import { buildConfig, type ConfigObject, type PluginMap } from '../utils.js';
 import { recommendedAngular } from './recommended-angular.js';
 import { recommendedAngularTemplate } from './recommended-angular-template.js';
 
-export const criteoSetupAngularApp = (plugins) =>
+export const criteoSetupAngularApp = (plugins: PluginMap): ConfigObject[] =>
   buildConfig([
     {
       ignores: ['.angular', '.vscode', 'dist', 'coverage', 'build', '**/*.generated.ts'],

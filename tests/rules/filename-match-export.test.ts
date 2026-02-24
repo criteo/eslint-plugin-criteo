@@ -1,8 +1,7 @@
-import rule from '../../lib/rules/filename-match-export.js';
-import { untypedRuleTester } from '../rule-tester';
-import type { RuleModule } from '@typescript-eslint/utils/ts-eslint';
+import rule from '../../src/rules/filename-match-export.js';
+import { untypedRuleTester } from '../rule-tester.js';
 
-untypedRuleTester.run('filename-match-export', rule as RuleModule<string, readonly unknown[]>, {
+untypedRuleTester.run('filename-match-export', rule, {
   valid: [
     { code: 'export const foo = 1;', filename: '/project/foo.ts' },
     { code: 'export class FooBar {}', filename: '/project/foo-bar.ts' },

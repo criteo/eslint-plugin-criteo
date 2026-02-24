@@ -1,8 +1,7 @@
-import rule from '../../lib/rules/until-destroy.js';
-import { untypedRuleTester } from '../rule-tester';
-import type { RuleModule } from '@typescript-eslint/utils/ts-eslint';
+import rule from '../../src/rules/until-destroy.js';
+import { untypedRuleTester } from '../rule-tester.js';
 
-untypedRuleTester.run('until-destroy', rule as RuleModule<string, readonly unknown[]>, {
+untypedRuleTester.run('until-destroy', rule, {
   valid: [
     {
       code: "import { untilDestroyed } from 'another-package';",

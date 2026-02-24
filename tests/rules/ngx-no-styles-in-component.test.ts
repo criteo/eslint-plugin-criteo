@@ -1,8 +1,7 @@
-import rule from '../../lib/rules/ngx-no-styles-in-component.js';
-import { untypedRuleTester } from '../rule-tester';
-import type { RuleModule } from '@typescript-eslint/utils/ts-eslint';
+import rule from '../../src/rules/ngx-no-styles-in-component.js';
+import { untypedRuleTester } from '../rule-tester.js';
 
-untypedRuleTester.run('ngx-no-styles-in-component', rule as RuleModule<string, readonly unknown[]>, {
+untypedRuleTester.run('ngx-no-styles-in-component', rule, {
   valid: [
     {
       code: '@Component({ templateUrl: "./foo.component.html" }) class FooComponent {}',

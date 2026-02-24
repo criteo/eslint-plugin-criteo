@@ -1,14 +1,13 @@
-/**
- * @fileoverview ngx-no-styles-in-component
- * @author Benjamin Chadwick
- */
-'use strict';
-
+import type { TSESLint, TSESTree } from '@typescript-eslint/utils';
 import { STYLE_URL_SELECTOR, STYLE_URLS_SELECTOR, STYLES_SELECTOR } from '../utils.js';
 
-const moreInfo = `More info: https://github.com/criteo/eslint-plugin-criteo#ngx-no-styles-in-component`;
+const moreInfo = 'More info: https://github.com/criteo/eslint-plugin-criteo#ngx-no-styles-in-component';
 
-export default {
+type MessageIds = 'styles';
+type Options = [];
+type Docs = { recommended: 'error' };
+
+const rule: TSESLint.RuleModule<MessageIds, Options, Docs> = {
   meta: {
     type: 'suggestion',
     docs: {
@@ -20,11 +19,10 @@ export default {
     },
     schema: [],
   },
-
   create(context) {
-    function report(node) {
+    const report = (node: TSESTree.Node): void => {
       context.report({ node, messageId: 'styles' });
-    }
+    };
 
     return {
       [STYLES_SELECTOR]: report,
@@ -33,3 +31,5 @@ export default {
     };
   },
 };
+
+export default rule;

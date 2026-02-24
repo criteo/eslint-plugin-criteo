@@ -1,8 +1,7 @@
-import rule from '../../lib/rules/prefer-readonly-decorators.js';
-import { untypedRuleTester } from '../rule-tester';
-import type { RuleModule } from '@typescript-eslint/utils/ts-eslint';
+import rule from '../../src/rules/prefer-readonly-decorators.js';
+import { untypedRuleTester } from '../rule-tester.js';
 
-untypedRuleTester.run('prefer-readonly-decorators', rule as RuleModule<string, readonly unknown[]>, {
+untypedRuleTester.run('prefer-readonly-decorators', rule, {
   valid: [
     {
       // Rule does nothing without explicit decorators option.

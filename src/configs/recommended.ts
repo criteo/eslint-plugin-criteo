@@ -1,11 +1,11 @@
 import pluginConfigEslintComments from '@eslint-community/eslint-plugin-eslint-comments/configs';
 import pluginJs from '@eslint/js';
 import pluginRxjs from 'eslint-plugin-rxjs-updated';
-import pluginCypress from 'eslint-plugin-cypress/flat';
+import pluginCypress from 'eslint-plugin-cypress';
 import pluginTypescript from 'typescript-eslint';
-import { buildConfig, tsConfigBase } from '../utils.js';
+import { buildConfig, tsConfigBase, type ConfigObject, type PluginMap } from '../utils.js';
 
-export const recommended = (plugins) =>
+export const recommended = (plugins: PluginMap): ConfigObject[] =>
   buildConfig([
     pluginJs.configs.recommended,
     pluginTypescript.configs.recommended,

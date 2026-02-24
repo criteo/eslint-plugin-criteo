@@ -1,8 +1,7 @@
-import rule from '../../lib/rules/ngxs-selector-array-length.js';
-import { untypedRuleTester } from '../rule-tester';
-import type { RuleModule } from '@typescript-eslint/utils/ts-eslint';
+import rule from '../../src/rules/ngxs-selector-array-length.js';
+import { untypedRuleTester } from '../rule-tester.js';
 
-untypedRuleTester.run('ngxs-selector-array-length', rule as RuleModule<string, readonly unknown[]>, {
+untypedRuleTester.run('ngxs-selector-array-length', rule, {
   valid: [
     {
       code: 'class TestState { mySelector(a) { return a; } }',
