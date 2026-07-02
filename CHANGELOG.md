@@ -7,7 +7,47 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Please see [the README](./README.md) for details of added rules.
 
-## Unversioned
+## 6.2.2
+
+- `no-todo-without-ticket`
+  - couldn't be disabled because it triggers itself, because the regex sees 'todo'. Added a check to not trigger the rule if there's an eslint directive.
+
+- `cypress-no-force`
+  - crashed when parser services were unavailable because it dereferenced parserServices.program unconditionally.
+  - falsely reported calls that explicitly set `force: false`.
+  - missed quoted object keys like 'force' because it only handled identifier keys.
+
+- `filename`
+  - crashed on non-literal templateUrl values because it assumed node.value.value was always a string.
+  - crashed on non-literal `styleUrl` values for the same reason.
+  - crashed when styleUrls entries were dynamic/non-literal.
+
+- `ngx-component-display`
+  - crashed on non-call decorators because it assumed decorator.expression.callee.name always existed.
+  - crashed when the tracked property had no initializer (readonly `cdsDisplay;`).
+  - crashed on bare `@HostBinding` (non-call decorator form).
+  - crashed when `HostBinding(...)` argument was not a string literal.
+
+- `ngxs-selector-array-length`
+  - crashed on non-call @selector decorators.
+  - crashed when @selector was called with a non-array argument.
+
+- `prefer-readonly-decorators`
+  - crashed on non-call decorators because it assumed expression.callee.name.
+
+- `until-destroy`
+  - crashed on default imports because it assumed every specifier had imported.name.
+  - crashed on namespace imports for the same reason.
+
+- `no-spreading-accumulators`
+  - auto-fixed one-parameter reducers incorrectly due to a bad guard (arrowFn.params <= 1).
+  - produced invalid fixes for identifier keys (static became acc[static] instead of property-safe output).
+
+- `filename-match-export`
+  - produced false positives for destructured exports by recording empty/undefined export names.
+
+- `independent-folders`
+  - missed forbidden imports targeting a feature folder root (../feature-b) because it only checked path.parse(...).dir.
 
 - Widen the `angular-eslint` peer dependency range to allow Angular ESLint v21
 
