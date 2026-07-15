@@ -7,13 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Please see [the README](./README.md) for details of added rules.
 
-## Unversioned
-
-- Widen the `angular-eslint` peer dependency range to allow Angular ESLint v21
-
 ## 6.2.1
 
 - Update `rxjs-angular/prefer-takeuntil` rule to support Angular's `takeUntilDestroyed` function
+- Widen the `angular-eslint` peer dependency range to allow Angular ESLint v21
 
 ## 6.2.0
 
