@@ -7,9 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Please see [the README](./README.md) for details of added rules.
 
-## 6.2.2
+## 6.2.3
 
 - Widen the `angular-eslint` peer dependency range to allow Angular ESLint v21
+
+## 6.2.2 — unpublished
+
+- Withdrawn from npm; republished as 6.2.3.
 
 ## 6.2.1
 
