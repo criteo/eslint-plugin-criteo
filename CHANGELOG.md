@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Please see [the README](./README.md) for details of added rules.
 
-## Unversioned
+## 7.0.0
 
 - [BREAKING] Update ESLint v9 to v10
 - Replace the ESLint v9-only RxJS plugins with `eslint-plugin-rxjs-x` and `eslint-plugin-rxjs-angular-x`
