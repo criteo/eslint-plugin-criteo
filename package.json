@@ -33,35 +33,33 @@
     "test:watch": "vitest"
   },
   "devDependencies": {
-    "@types/node": "20.15.0",
-    "@typescript-eslint/utils": "8.56.0",
-    "@typescript-eslint/rule-tester": "8.56.0",
-    "eslint": "9.39.2",
-    "eslint-plugin-eslint-plugin": "7.3.1",
-    "eslint-plugin-n": "17.24.0",
+    "@types/node": "20.19.43",
+    "@typescript-eslint/rule-tester": "8.67.0",
+    "@typescript-eslint/utils": "8.67.0",
+    "eslint": "10.8.1",
+    "eslint-plugin-eslint-plugin": "7.6.1",
+    "eslint-plugin-n": "18.3.0",
     "globals": "17.3.0",
     "prettier": "3.8.1",
     "typescript": "5.8.3",
-    "vitest": "4.0.18"
+    "vitest": "^4.1.11"
   },
   "engines": {
     "node": ">=20",
     "npm": ">=10"
   },
   "peerDependencies": {
-    "@eslint-community/eslint-plugin-eslint-comments": "^4.4.1",
-    "@eslint/js": "^9.20.0",
-    "angular-eslint": ">=19.1.0 <22",
-    "eslint": "^9.20.1",
+    "@eslint-community/eslint-plugin-eslint-comments": "^4.7.2",
+    "@eslint/js": "^10.0.0",
+    "angular-eslint": ">=21.3.0 <22",
+    "eslint": "^10.0.0",
     "eslint-plugin-cypress": "^4.1.0",
     "eslint-plugin-no-only-tests": "^3.3.0",
-    "eslint-plugin-react": "^7.37.4",
-    "eslint-plugin-react-hooks": "^5.1.0",
-    "eslint-plugin-rxjs-angular-updated": "^1.0.36",
-    "eslint-plugin-rxjs-updated": "^1.0.36",
+    "eslint-plugin-rxjs-angular-x": "^1.0.1",
+    "eslint-plugin-rxjs-x": "^1.0.6",
     "eslint-plugin-simple-import-sort": "^12.1.1",
     "typescript": "^5.0.0",
-    "typescript-eslint": "^8.24.0"
+    "typescript-eslint": "^8.67.0"
   },
   "license": "Apache-2.0",
   "repository": {

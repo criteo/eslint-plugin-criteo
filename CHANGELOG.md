@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Please see [the README](./README.md) for details of added rules.
 
+## Unversioned
+
+- [BREAKING] Update ESLint v9 to v10
+- Replace the ESLint v9-only RxJS plugins with `eslint-plugin-rxjs-x` and `eslint-plugin-rxjs-angular-x`
+- Remove unused React plugin peer dependencies
+
 ## 6.2.3
 
 - Widen the `angular-eslint` peer dependency range to allow Angular ESLint v21
