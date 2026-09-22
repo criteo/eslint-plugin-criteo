@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Please see [the README](./README.md) for details of added rules.
 
+## Unversioned
+
+- Fix the Angular app preset's component selector configuration for Angular ESLint 20.6 and later, supporting kebab-case elements and camelCase attributes
+
 ## 7.0.0
 
 - [BREAKING] Update ESLint v9 to v10
